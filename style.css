@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background: #202020;
+}
+
+.novato-area-chart {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0);
+    margin: 20px;
+}
+
+.novato-area-chart-interval {
+    width: 0;
+    height: 0;
+    background-color: 0;
+    position: absolute;
+    z-index: 100;
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.novato-area-chart-interval:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 1px dashed rgba(255, 255, 255, 0.5);
+}
+
+.novato-area-chart-interval:hover > .novato-area-chart-interval-indicator{
+    opacity: 1;
+}
+
+.novato-area-chart-interval-indicator {
+    width: fit-content;
+    padding: 5px 10px;
+    background-color: #0056ff;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    left: -25px;
+    z-index: 101;
+    opacity: 0;
+}
+
+.novato-area-chart-interval-indicator::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    max-width: 10px;
+    max-height: 10px;
+    min-width: 10px;
+    min-height: 10px;
+    background: #0056ff;
+    position: absolute;
+    transform: rotateZ(45deg);
+    border-radius: 2px 0 10px 0;
+    top: -5px;
+}
+
+.novato-area-chart-svg{
+    position: relative;
+}
+
+.novato-indicator {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.novato-indicator-svg {
+    width: 250px;
+}
+
+.novato-indicator::after {
+    content: "";
+    width: 60%;
+    height: 60%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.novato-indicator::before {
+    content: "50";
+    position: absolute;
+    top: -5px;
+    color: gray;
+    font-size: 12px;
+    user-select: none;
+}
+
+.novato-indicator-data {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    color: #fff;
+    user-select: none;
+}
+
+.novato-indicator-data::before {
+    content: "0";
+    position: absolute;
+    left: -5px;
+    color: gray;
+    font-size: 12px;
+    user-select: none;
+}
+
+.novato-indicator-data::after {
+    content: "100";
+    position: absolute;
+    right: -10px;
+    color: gray;
+    font-size: 12px;
+    user-select: none;
+}
+
+.novato-indicator-data-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.novato-indicator-data-value {
+    font-size: 35px;
+    font-weight: 300;
+}
+
+.novato-indicator-data-type {
+    height: 35px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 18px;
+    display: flex;
+    text-align: start;
+}
+
+.novato-indicator-data-info {
+    color: gray;
+    font-size: 12px;
+}
+
+circle {
+    transition: all 0.3s ease;
+}
