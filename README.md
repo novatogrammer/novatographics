@@ -5,7 +5,7 @@ Este repositorio contiene una colección de gráficos y ejemplos relacionados co
 ## Contenido del repositorio
 
 - `/novato-area-chart`: Ejemplo de gráfico de área utilizando SVG y JavaScript.
-- `/novato-indicator`: Ejemplo de gráfico de barras utilizando SVG y JavaScript.
+- `/novato-indicator`: Ejemplo de gráfico semicírcular con indicador de 0 - 100 utilizando SVG y JavaScript.
 
 Cada directorio contiene los archivos necesarios para ejecutar el ejemplo correspondiente. Puedes explorar cada uno de ellos para entender cómo se implementa cada tipo de gráfico o visualización utilizando SVG y JavaScript.
 
